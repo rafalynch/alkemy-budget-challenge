@@ -14,7 +14,9 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.12.5",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development ts-node ./server-src/index.ts",
@@ -24,8 +26,5 @@
     "build": "npm run build:be && npm run build:fe",
     "sync": "ts-node sequelize-sync.ts"
   },
-  "devDependencies": {
-    "cross-env": "^7.0.3",
-    "dotenv": "^10.0.0"
-  }
+  "devDependencies": {}
 }
