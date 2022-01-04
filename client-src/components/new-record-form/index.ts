@@ -70,6 +70,7 @@ class NewRecordForm extends HTMLElement {
     const amountInput = document.createElement("input");
     amountInput.type = "number";
     amountInput.step = "0.01";
+    amountInput.min = "0";
     amountInput.name = "amount";
     amountInput.id = "amount";
     newRecordForm.appendChild(amountInput);

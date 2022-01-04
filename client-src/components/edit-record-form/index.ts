@@ -76,6 +76,7 @@ class EditRecordForm extends HTMLElement {
     amountInputEl.classList.add("edit-amount-input");
     amountInputEl.type = "number";
     amountInputEl.step = "0.01";
+    amountInputEl.min = "0";
     amountInputEl.name = "amount";
     amountInputEl.id = "edit-amount";
     amountInputEl.defaultValue = recordData.amount;
