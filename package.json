@@ -27,5 +27,8 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": "14.17.0"
   }
 }
