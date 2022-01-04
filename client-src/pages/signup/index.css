@@ -1,0 +1,33 @@
+.signup-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 25px;
+}
+.signup__title {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+.signup-form {
+  display: grid;
+  margin: 15px;
+  gap: 10px;
+  justify-content: center;
+}
+.signup-form__email-input,
+.signup-form__password-input {
+  height: 25px;
+  border-radius: 5px;
+  font-family: inherit;
+  border-width: 1px;
+}
+.signup-form__btn {
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 600;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  background-color: rgb(183, 255, 183);
+  cursor: pointer;
+}

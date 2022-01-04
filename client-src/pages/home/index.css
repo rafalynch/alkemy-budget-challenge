@@ -1,0 +1,17 @@
+.home-container {
+  display: grid;
+  justify-content: center;
+  margin: 25px auto;
+  max-width: 820px;
+}
+.home__title {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+.home__subtitle {
+  text-align: center;
+}
+.home__records-table {
+  justify-self: center;
+}

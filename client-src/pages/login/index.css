@@ -1,0 +1,45 @@
+.login-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 25px;
+}
+.login__title {
+  font-size: 40px;
+  margin: 0;
+}
+.login-form {
+  display: grid;
+  margin: 15px;
+  gap: 10px;
+  width: 214px;
+  justify-content: center;
+  justify-self: center;
+}
+.login-form__email-input,
+.login-form__password-input {
+  height: 25px;
+  border-radius: 5px;
+  font-family: inherit;
+  border-width: 1px;
+}
+.login-form__btn {
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 600;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  background-color: rgb(183, 255, 183);
+  cursor: pointer;
+}
+.signup-btn {
+  width: 200px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 600;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 165, 106);
+  cursor: pointer;
+  justify-self: center;
+}

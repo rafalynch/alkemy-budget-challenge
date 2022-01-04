@@ -1,0 +1,36 @@
+.new-record-form {
+  display: grid;
+  justify-content: center;
+}
+input,
+select,
+button {
+  width: 200px;
+  height: 20px;
+  font-family: "Open sans";
+  margin-bottom: 5px;
+}
+label {
+  text-align: center;
+  font-size: 10px;
+}
+.submit-btn {
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  width: 100px;
+  margin: 5px auto;
+  background-color: khaki;
+}
+@media (min-width: 700px) {
+  input,
+  select,
+  button {
+    width: 200px;
+    height: 35px;
+  }
+  label {
+    font-size: 12px;
+  }
+}
