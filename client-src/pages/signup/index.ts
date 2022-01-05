@@ -94,6 +94,11 @@ class Signup extends HTMLElement {
         window.alert("Los campos no pueden quedar vacios");
         return;
       }
+      // Check for password length
+      if ((target.password.value as string).length < 8) {
+        window.alert("La contraseña debe tener al menos 8 caracteres de largo");
+        return;
+      }
       // Check for password match
       if (password != passwordConfirmation) {
         window.alert("Las contraseñas no coinciden");
