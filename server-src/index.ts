@@ -52,7 +52,7 @@ app.post("/auth/token", async (req, res) => {
 });
 
 // Auth middleware.
-function authMiddleWare(req, res, next) {
+function authMiddleware(req, res, next) {
   bearerToken(req, async (err, token) => {
     try {
       const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
@@ -65,7 +65,7 @@ function authMiddleWare(req, res, next) {
 }
 
 // Create a new record.
-app.post("/me/records", authMiddleWare, async (req, res) => {
+app.post("/me/records", authMiddleware, async (req, res) => {
   const { concept, amount, date, type, category } = req.body;
   const UserId = (req as any)._userId;
 
@@ -83,7 +83,7 @@ app.post("/me/records", authMiddleWare, async (req, res) => {
 });
 
 // Get all records from user.
-app.get("/me/records", authMiddleWare, async (req, res) => {
+app.get("/me/records", authMiddleware, async (req, res) => {
   const UserId = (req as any)._userId;
   const limit = Number.parseInt(req.query.limit as string);
   const category = req.query.category as string;
@@ -98,7 +98,7 @@ app.get("/me/records", authMiddleWare, async (req, res) => {
 });
 
 // Get one record by record ID.
-app.get("/me/records/:id", authMiddleWare, async (req, res) => {
+app.get("/me/records/:id", authMiddleware, async (req, res) => {
   const UserId = (req as any)._userId;
   const recordId = req.params.id;
   const recordFound = await getRecordById(UserId, recordId);
@@ -106,7 +106,7 @@ app.get("/me/records/:id", authMiddleWare, async (req, res) => {
 });
 
 // Update a record by ID.
-app.patch("/me/records/:recordId", authMiddleWare, async (req, res) => {
+app.patch("/me/records/:recordId", authMiddleware, async (req, res) => {
   const UserId = (req as any)._userId;
   const id = req.params.recordId;
   const { concept, amount, date, category } = req.body;
@@ -121,14 +121,14 @@ app.patch("/me/records/:recordId", authMiddleWare, async (req, res) => {
 });
 
 // Get account balance.
-app.get("/me/balance", authMiddleWare, async (req, res) => {
+app.get("/me/balance", authMiddleware, async (req, res) => {
   const UserId = (req as any)._userId;
   const balance = await getBalance(UserId);
   res.json({ balance });
 });
 
 // Delete record by id.
-app.delete("/me/records/:recordId", authMiddleWare, async (req, res) => {
+app.delete("/me/records/:recordId", authMiddleware, async (req, res) => {
   const id = req.params.recordId;
   const deleted = await deleteRecordById(Number.parseFloat(id));
   res.json(deleted);

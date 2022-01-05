@@ -116,6 +116,13 @@ class NewRecordForm extends HTMLElement {
         window.alert("Los campos no pueden quedar vacios");
         return;
       }
+      //Check for concept length
+      if ((concept as string).length > 25) {
+        window.alert(
+          "El concepto es muy largo. No puede superar los 25 caracteres"
+        );
+        return;
+      }
 
       const created = await state.newRecord({
         date,

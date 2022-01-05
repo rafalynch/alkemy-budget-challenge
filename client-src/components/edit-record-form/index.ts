@@ -120,9 +120,17 @@ class EditRecordForm extends HTMLElement {
       const concept = target.concept.value;
       const amount = target.amount.value;
       const category = target.category.value;
+
       // Check for empty fields
       if (!date || !concept || !amount || !category) {
         window.alert("Los campos no pueden quedar vacios");
+        return;
+      }
+      //Check for concept length
+      if ((concept as string).length > 25) {
+        window.alert(
+          "El concepto es muy largo. No puede superar los 25 caracteres"
+        );
         return;
       }
 
