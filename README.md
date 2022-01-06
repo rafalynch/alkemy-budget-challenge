@@ -23,7 +23,7 @@ Some of the technologies used for this project are:
 - PostgreSQL
 - Sequelize
 
-## Things than can be improved
+## Things that can be improved
 
 - Password recovery process
 - User profile
